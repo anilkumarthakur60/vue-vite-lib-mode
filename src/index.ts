@@ -6,9 +6,11 @@ const defaultOptions = {
   classNames: "default-class",
   hello: "world",
 };
-export default {
+const InputPlugin = {
   install: (app: App, option: InputPluginOptions = defaultOptions) => {
     app.component("InputComponent", InputComponent);
     app.provide("InputPluginOptions", option);
   },
 };
+
+export default InputPlugin;
