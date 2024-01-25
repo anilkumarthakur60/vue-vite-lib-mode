@@ -22,6 +22,7 @@ export default defineConfig({
     },
     sourcemap: true,
     emptyOutDir: true,
+    cssCodeSplit: true,
   },
   plugins: [vue(), dts()],
 });
