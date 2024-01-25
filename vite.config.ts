@@ -23,10 +23,5 @@ export default defineConfig({
     sourcemap: true,
     emptyOutDir: true,
   },
-  plugins: [
-    vue(),
-    dts({
-      rollupTypes: true,
-    }),
-  ],
+  plugins: [vue(), dts()],
 });

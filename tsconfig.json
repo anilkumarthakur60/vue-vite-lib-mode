@@ -7,13 +7,13 @@
     "skipLibCheck": true,
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "Node",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
-    "allowJs": true,
+    "allowJs": false,
 
     /* Linting */
     "strict": true,
@@ -22,8 +22,12 @@
     "noFallthroughCasesInSwitch": true,
     /*Declaration */
     "declaration": true,
-    "typeRoots": ["./dist/index.d.ts"]
+
+    "typeRoots": ["./dist/index.d.ts", "node_modules/@types"],
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "./src/index.ts"],
+  "include": ["src", "./src/index.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
