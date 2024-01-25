@@ -1,7 +1,6 @@
 import { App } from "vue";
 import { InputComponent } from "./components";
 import { InputPluginOptions } from "./types/pluginType";
-export { InputComponent };
 const defaultOptions = {
   classNames: "default-class",
   hello: "world",
@@ -13,4 +12,4 @@ const InputPlugin = {
   },
 };
 
-export default InputPlugin;
+export { InputPlugin, InputComponent };
