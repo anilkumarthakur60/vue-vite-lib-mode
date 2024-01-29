@@ -9,7 +9,6 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
       name: "Vue3InputPlugin",
-      // formats: ["es", "umd", "cjs"],
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
