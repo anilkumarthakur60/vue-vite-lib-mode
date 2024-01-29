@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { InputComponent, SampleComponent } from './components';
 import { ref } from 'vue';
-const data=ref('hello world')
+const data = ref('hello world')
 
 </script>
 
 <template>
   <div>
-   <SampleComponent v-model="data" />
-   <InputComponent v-model="data" />
+    <SampleComponent v-model="data" />
+    <InputComponent v-model="data" />
 
   </div>
 </template>
@@ -20,9 +20,11 @@ const data=ref('hello world')
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }

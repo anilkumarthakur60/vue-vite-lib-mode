@@ -9,15 +9,15 @@ withDefaults(defineProps<Props>(), {
 
 const emit = defineEmits(["update:modelValue"]);
 
-const input: Ref<HTMLInputElement | null> = ref(null);
+const inputRef: Ref<HTMLInputElement | null> = ref(null);
 
 onMounted(() => {
-  if (input.value?.hasAttribute("autofocus")) {
-    input.value.focus();
+  if (inputRef.value?.hasAttribute("autofocus")) {
+    inputRef.value.focus();
   }
 });
 
-defineExpose({ focus: () => input.value?.focus() });
+defineExpose({ focus: () => inputRef.value?.focus() });
 
 const handleInput = (event: Event) => {
   emit("update:modelValue", (event.target as HTMLInputElement).value);
@@ -28,8 +28,10 @@ const injectedData = inject("InputPluginOptions");
 
 <template>
   <div class="anyClass1">
-    <div class="">Sample Component Model Value {{ modelValue }}</div>
-    <input class="inputClass1" ref="input" :value="modelValue" :type="textType" @input="handleInput" />
+    <div class="">
+      Sample Component Model Value {{ modelValue }}
+    </div>
+    <input ref="inputRef" class="inputClass1" :value="modelValue" :type="textType" @input="handleInput" />
   </div>
 
   <div>
@@ -40,3 +42,19 @@ const injectedData = inject("InputPluginOptions");
   </pre>
   </div>
 </template>
+
+<style scoped>
+.anyClass1 {
+  color: rgb(102, 0, 255);
+}
+
+.inputClass1 {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+</style>
