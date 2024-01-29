@@ -27,11 +27,11 @@ const injectedData = inject("InputPluginOptions");
 </script>
 
 <template>
-  <div class="anyClass">
+  <div class="anyClass1">
     <div class="">
-      Input Component Model Value {{ modelValue }}
+      Sample Component Model Value {{ modelValue }}
     </div>
-    <input ref="input" class="inputClass" :value="modelValue" :type="textType" @input="handleInput" />
+    <input class="inputClass1" ref="input" :value="modelValue" :type="textType" @input="handleInput" />
   </div>
 
   <div>
@@ -43,3 +43,4 @@ const injectedData = inject("InputPluginOptions");
     >
   </div>
 </template>
+

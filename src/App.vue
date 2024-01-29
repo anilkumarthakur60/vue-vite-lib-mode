@@ -1,11 +1,15 @@
 <script setup lang="ts">
+import { InputComponent, SampleComponent } from './components';
+import { ref } from 'vue';
+const data=ref('hello world')
+
 </script>
 
 <template>
   <div>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+   <SampleComponent v-model="data" />
+   <InputComponent v-model="data" />
+
   </div>
 </template>
 
