@@ -39,7 +39,6 @@ const injectedData = inject("InputPluginOptions");
     plugin default options:
     <pre>
   {{ injectedData }}
-  </pre
-    >
+  </pre>
   </div>
 </template>

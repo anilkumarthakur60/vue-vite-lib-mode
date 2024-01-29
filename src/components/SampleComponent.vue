@@ -28,9 +28,7 @@ const injectedData = inject("InputPluginOptions");
 
 <template>
   <div class="anyClass1">
-    <div class="">
-      Sample Component Model Value {{ modelValue }}
-    </div>
+    <div class="">Sample Component Model Value {{ modelValue }}</div>
     <input class="inputClass1" ref="input" :value="modelValue" :type="textType" @input="handleInput" />
   </div>
 
@@ -39,8 +37,6 @@ const injectedData = inject("InputPluginOptions");
     plugin default options:
     <pre>
   {{ injectedData }}
-  </pre
-    >
+  </pre>
   </div>
 </template>
-
